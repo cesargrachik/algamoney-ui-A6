@@ -32,6 +32,7 @@ export class AuthService {
       .toPromise()
       .then(response => {
         this.armazenarToken(response.access_token);
+        console.log('access token criado!');
       })
       .catch(response => {
         if (response.status === 400) {
